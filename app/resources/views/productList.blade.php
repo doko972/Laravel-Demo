@@ -13,9 +13,9 @@
                 @method('DELETE')
                 <button type="submit">Supprimer</button>
             </form>
+            <a href="{{ route('product.edit', $product->id) }}">Modifier</a>
         </li>
     @endforeach
 </ul>
 <a href="{{ route('product.create') }}">Ajouter un produit</a>
 @endsection
-
