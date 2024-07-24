@@ -10,11 +10,17 @@
 
 <body>
     <header>
+        <nav class="navbar">
+            <div class="navbar-brand">Liste de Produits</div>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="{{ route('product.index') }}">Accueil</a>
+                <a href="{{ route('product.create') }}">Ajouter</a>
+            </div>
+        </nav>
     </header>
 
-        @section('content')
-        @show 
-
+    @section('content')
+    @show 
 </body>
 
 </html>

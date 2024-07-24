@@ -24,7 +24,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit"><a href="{{ route('product.edit', $product->id) }}">Modifier</a></button>
-                        <button type="submit">Supprimer</button>
+                        <button type="submit" onclick="return confirm('Voulez-vous vraiment supprimer ce produit ?')">Supprimer</button>
                     </form>
                 </td>
             </tr>
