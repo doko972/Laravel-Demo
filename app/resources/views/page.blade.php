@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ asset('/css/styles.css') }}" /> -->
 </head>
 
 <body>
     <header>
-        <h1>{{ }}</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ @route('home') }}"></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
     </header>
-    @section('content')
 
-    Main content
+        @section('content')
+        @show 
 
-    @show
 </body>
 
 </html>

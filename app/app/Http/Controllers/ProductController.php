@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\Redirect;
 
 class ProductController extends Controller
 {
@@ -13,9 +14,10 @@ class ProductController extends Controller
     public function index()
     {
         $content = [
-            'title' => 'Test de titre'
+            'title' => 'Liste d\'articles',
+            'products' => Product::all()
         ];
-        return view('productForm', $content);
+        return view('productList', $content);
     }
 
     /**
@@ -23,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('createProduct');
     }
 
     /**
@@ -31,11 +33,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // $product = new ProductController;
-        // $product->name = $request->input('name');
-        // $product->price = $request->input('price');
-        // $product->save();
-        // return Redirect::route('product.list');
+        $product = new Product;
+        $product->name = $request->input('name');
+        $product->price = $request->input('price');
+        $product->description = $request->input('description');
+        $product->save();
+        return Redirect::route('product.index');
 
     }
 

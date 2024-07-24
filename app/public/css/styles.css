@@ -203,6 +203,7 @@ ul {
 
 .task__list__create {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
     align-items: center;
