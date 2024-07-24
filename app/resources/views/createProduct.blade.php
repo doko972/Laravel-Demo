@@ -3,7 +3,7 @@
 @section('title', 'Créer un produit')
 
 @section('content')
-<h2>Créer un produit</h2>
+<h2>@yield('title')</h2>
 <form action="{{ route('product.store') }}" method="post">
     @csrf
     <label for="name">Nom:</label>
